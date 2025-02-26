@@ -1,0 +1,110 @@
+/* Adicione no styles.css */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  section {
+    animation: fadeIn 1s ease-in-out;
+  } 
+
+#home{
+  font-size: 3em;
+  color: white;
+}	
+
+#link{
+  color: #17a2b8;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+#link:hover{
+  color: #138496;
+}
+
+/* Estilo normal da navbar */
+#minha-navbar {
+  transition: all 0.3s ease-in-out; /* Transição suave para todas as mudanças */
+  padding: 5rem 1rem; /* Padding padrão */
+  background-color: #343a40; /* Cor de fundo padrão */
+}
+
+/* Estilo da navbar quando ela for reduzida */
+#minha-navbar.scrolled {
+  padding: 0.5rem 1rem; /* Menor padding quando rolada */
+  background-color: #212529; /* Cor de fundo mais escura quando rolada */
+}
+
+#minha-navbar .navbar-brand,
+#minha-navbar .nav-link {
+  transition: font-size 0.3s ease-in-out; /* Transição suave para o tamanho da fonte */
+}
+
+/* Reduzir tamanho da fonte dos links e do logo quando rolada */
+#minha-navbar.scrolled .navbar-brand {
+  font-size: 1.3rem; /* Tamanho da fonte do logo um pouco menor */
+}
+
+#minha-navbar.scrolled .nav-link {
+  font-size: 1.3rem; /* Tamanho da fonte dos links reduzido */
+}
+
+#imagemFundo {
+  filter: blur(5px);
+}
+
+/* A imagem vai cobrir toda a tela */
+.background-image {
+  width: 100%;
+  height: 100vh; /* 100% da altura da tela */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  z-index: -1; /* Garante que a imagem fique atrás do texto */
+}
+
+/* Estilos para o nome */
+.masthead-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5vw; /* Tamanho do texto baseado na largura da tela */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  margin: 0;
+  width: 80%; /* Ajuste a largura do texto conforme necessário */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Animação de escrita */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #fff;
+  width: 0;
+  animation: typing 4s steps(40) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Ajuste do tamanho da fonte em telas menores */
+@media (max-width: 500px) {
+  .masthead-heading {
+    font-size: 3.5w; /* Reduz o tamanho da fonte em telas menores */
+  }
+}
