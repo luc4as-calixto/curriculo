@@ -1,12 +1,17 @@
-/* Adicione no styles.css */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-  to {
-    opacity: 1;
-  }
+.col-lg-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 body {
@@ -16,6 +21,8 @@ body {
 section {
   animation: fadeIn 1s ease-in-out;
 }
+
+/* ------------------------------------ nav ------------------------------------ */
 
 #home {
   font-size: 3em;
@@ -36,7 +43,6 @@ section {
   color: #138496;
 }
 
-/* ------------------------------------ nav ------------------------------------ */
 
 /* Estilo normal da navbar */
 #minha-navbar {
@@ -73,7 +79,7 @@ section {
   /* Tamanho da fonte dos links reduzido */
 }
 
-/* ------------------------------------ imagem-header ------------------------------------ */
+/* ------------------------------------ section imagem-header ------------------------------------ */
 
 #imagemFundo {
 
@@ -124,7 +130,7 @@ section {
     width: 100%;
   }
 }
-
+  
 .animate-text {
   display: inline-block;
   overflow: hidden;
@@ -159,7 +165,7 @@ section {
   }
 }
 
-/* ------------------------------------ sections ------------------------------------ */
+/* ------------------------------------ section Sobre mim ------------------------------------ */
 
 #sobre {
   z-index: 2;
@@ -171,32 +177,58 @@ section {
   align-items: center;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.col-lg-4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.sobre {
-  display: flex;
-  justify-content: center;
+#txt2{
+  width: 350px;
+  height: auto;
   align-items: center;
 }
 
+#txt2{
+  width: 350px;
+  height: auto;
+  align-items: center;
+  padding-left: 5%;
+}
+
+#txt1{
+  width: 350px;
+  height: auto;
+  padding-right: 5%;
+  align-items: center;
+}	
+
+#imgminha{
+  width: 250px;
+  height: auto;
+}
+
+#habilidades{
+  background-color: #17a2b8;
+}
+
+/* ------------------------------------ section projeto ------------------------------------ */
 
 #projetos {
   z-index: 2;
   padding: 50px;
   margin-top: 15px;
+}
+
+#imgprojetos{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ------------------------------------ section contato ------------------------------------ */
+
+#contato {
+  z-index: 2;
+  padding: 50px;
+  margin-top: 15px;
   background-color: #17a2b8;
 }
+
+/* ------------------------------------ section footer ------------------------------------ */
