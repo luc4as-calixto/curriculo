@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('contato-form').addEventListener('submit', function (event) {
   event.preventDefault(); // Evita o comportamento padrão de recarregar a página
 
+  // Oculta as mensagens de erro e sucesso
   document.getElementById('success-message').classList.add('d-none');
+  document.getElementById('alert-message-erronumber').classList.add('d-none');
 
   var whatsapp = document.getElementById('numero_contato').value;
 
@@ -43,5 +45,38 @@ document.getElementById('contato-form').addEventListener('submit', function (eve
     setTimeout(() => {
       document.getElementById('contato-form').reset();
     }, 2000);
+  }
+});
+
+// Função para abrir o modal
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  document.body.classList.add("modal-open"); // Adiciona a classe ao body
+}
+
+// Função para fechar o modal
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "none";
+  document.body.classList.remove("modal-open"); // Remove a classe do body
+}
+
+// Adiciona eventos aos cards
+document.getElementById("card-projeto-1").addEventListener("click", () => openModal("modal-1"));
+document.getElementById("card-projeto-2").addEventListener("click", () => openModal("modal-2"));
+
+// Adiciona eventos aos botões de fechar
+document.querySelectorAll(".close").forEach((closeBtn) => {
+  closeBtn.addEventListener("click", () => {
+    const modal = closeBtn.closest(".modal");
+    closeModal(modal.id);
+  });
+});
+
+// Fecha o modal se o usuário clicar fora dele
+window.addEventListener("click", (event) => {
+  if (event.target.classList.contains("modal")) {
+    closeModal(event.target.id);
   }
 });

@@ -14,12 +14,24 @@
   text-align: center;
 }
 
+button{
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover{
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+}	
+
 body {
   overflow-x: hidden;
 }
 
 section {
   animation: fadeIn 1s ease-in-out;
+}
+
+#distancia {
+  gap: 50px;
 }
 
 /* ------------------------------------ nav ------------------------------------ */
@@ -34,13 +46,13 @@ section {
 }
 
 #link {
-  color: #17a2b8;
+  color: #f0f0f0;
   font-size: 1.5em;
   text-decoration: none;
 }
 
 #link:hover {
-  color: #138496;
+  color: rgba(255, 255, 255, 0.562) ;
 }
 
 
@@ -170,24 +182,27 @@ section {
 #sobre {
   z-index: 2;
   padding: 50px;
-  margin-top: 15px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#txt2{
+#txtsobre{
   width: 350px;
-  height: auto;
-  align-items: center;
+  align-items: center;  
+  padding: 10px;
 }
 
-#txt2{
+#txt{
   width: 350px;
-  height: auto;
-  align-items: center;
-  padding-left: 5%;
+  align-items: center;  
+  padding: 10px;
+  border: 3px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #txt1{
@@ -195,16 +210,52 @@ section {
   height: auto;
   padding-right: 5%;
   align-items: center;
+  padding: 10px;
+  border: 3px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }	
+
+
+#txt2{
+  width: 350px;
+  height: auto;
+  align-items: center;
+  padding-left: 5%;
+  padding: 10px;
+  border: 3px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 #imgminha{
   width: 250px;
   height: auto;
 }
 
+/* ------------------------------------ section habilidades ------------------------------------ */
+
 #habilidades{
-  background-color: #17a2b8;
+  background-color: #e9ecef;
 }
+
+/* animação  */
+
+.text-container {
+  overflow: hidden; 
+  width: 100%; 
+}
+
+.animated-text {
+  display: inline-block; 
+  transition: transform 0.3s ease; 
+  cursor: default;  
+}
+
+.animated-text:hover {
+  transform: translateX(20px);
+}
+
 
 /* ------------------------------------ section projeto ------------------------------------ */
 
@@ -221,6 +272,74 @@ section {
   margin: 0 auto;
 }
 
+#card-projeto{
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);  
+}
+
+#card-projeto-1{
+  cursor: pointer;
+  font-size: 17px;
+}
+
+#card-projeto-2{
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* modal */
+
+/* Estilo do modal */
+.modal {
+  display: none; /* Esconde o modal por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
+  backdrop-filter: blur(5px); /* Efeito de desfoque */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: #343a40; /* Cor de fundo do modal */
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  color: white;
+  text-align: center;
+}
+
+/* Botão de fechar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: white;
+}
+
+/* Imagem dentro do modal */
+.modal-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Adiciona padding para compensar a barra de scroll */
+body.modal-open {
+  overflow: hidden;
+  padding-right: 15px; /* Ajuste conforme necessário */
+}
 
 /* ------------------------------------ section contato ------------------------------------ */
 
@@ -228,7 +347,32 @@ section {
   z-index: 2;
   padding: 50px;
   margin-top: 15px;
-  background-color: #17a2b8;
+  background-color: #e9ecef;
+}
+
+/* Estiliza os campos de input */
+.form-control {
+  background-color: #f8f9fa; 
+  border: 2px solid #ccc; 
+  border-radius: 8px; 
+  padding: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito ao focar no campo */
+.form-control:focus {
+  border-color: #007bff; 
+  box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+  background-color: white;
+}
+
+/* Deixa os placeholders mais bonitos */
+.form-control::placeholder {
+  color: #999;
+  font-style: italic;
 }
 
 /* ------------------------------------ section footer ------------------------------------ */

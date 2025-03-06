@@ -35,6 +35,9 @@
           <li class="nav-item">
             <a id="link" class="nav-link" href="#contato">Contato</a>
           </li>
+          <li class="nav-item">
+            <a id="link" class="nav-link" href="#habilidades">Habilidade</a>
+          </li>
         </ul>
       </div>
 
@@ -48,37 +51,33 @@
 
   <!-- Sobre Mim -->
   <section id="sobre">
-    <div class="row">
-      <h1 class="p-2 text-center">Sobre mim</h1>
-      <div id="txt1" class="col-lg-4 ms-auto">
+    <div id="distancia" class="row">
+      <div id="txtsobre" class="col-lg-4">
         <img id="imgminha" class="rounded-circle p-4" src="assets/img/foto.jpg" alt="Foto do desenvolvedor" />
-        <p id="txt1" class="masthead-subheading font-weight-light p-4 fs-4">Desenvolvedor Full-stack</p>
+        <p id="txt" class="masthead-subheading font-weight-light p-4 fs-4">Desenvolvedor Full-stack</p>
       </div>
-      <div id="txt2" class="col-lg-4 me-auto">
-        <p id="txt2" class="text-center fs-5">Olá, meu nome é Lucas Calixto de Souza, tenho 17 anos e sou de Joinville. Atualmente, estou no terceiro ano do Ensino Médio na Escola Tufi Dippe e curso Técnico em Desenvolvimento de Sistemas no SENAI.</p>
+      <div id="txt" class="col-lg-4">
+        <p class="text-center fs-5">Olá, meu nome é Lucas Calixto de Souza, tenho 17 anos e sou de Joinville.
+          Atualmente, estou no terceiro ano do Ensino Médio na Escola Tufi Dippe e curso Técnico em Desenvolvimento de
+          Sistemas no SENAI.</p>
       </div>
     </div>
   </section>
 
   <!-- Habilidades -->
-  <section id="habilidades" class="py-5 ">
-    <div class="container text-white">
+  <section id="habilidades" class="py-5">
+    <div class="text-container container mt-4">
       <h1 class="text-center mb-4">Habilidades Técnicas</h1>
-      <div class="row text-center">
-        <div class="col-lg-4 mb-4">
-          <h2>Front-end</h2>
-          <p class="fs-4">🌐 HTML</p>
-          <p class="fs-4">🎨 CSS</p>
-          <p class="fs-4">🖌️ Bootstrap</p>
-          <p class="fs-4">⚙️ JavaScript</p>
+      <div id="distancia" class="row text-center">
+        <div id="txt1" class="col-lg-4 mb-4">
+          <p class="fs-4 animated-text">🌐 HTML</p>
+          <p class="fs-4 animated-text">🎨 CSS</p>
+          <p class="fs-4 animated-text">🖌️ Bootstrap</p>
         </div>
-        <div class="col-lg-4 mb-4">
-          <h2>Back-end</h2>
-          <p class="fs-4">🐍 Python</p>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <h2>Banco de Dados</h2>
-          <p class="fs-4">🗃️ SQL</p>
+        <div id="txt2" class="col-lg-4 mb-4">
+          <p class="fs-4 animated-text">🐍 Python</p>
+          <p class="fs-4 animated-text">⚙️ JavaScript</p>
+          <p class="fs-4 animated-text">🗃️ SQL</p>
         </div>
       </div>
     </div>
@@ -89,11 +88,12 @@
     <div class="container">
       <h1 class="text-center p-3">Projetos</h1>
       <div class="row p-4">
+        <!-- Card 1 -->
         <div class="col-lg-6 col-md-4 p-3 text-white">
-          <div class="card-body bg-dark p-4 text-center" style="border-radius: 20px; height: 580px;">
+          <div id="card-projeto-1" class="card-body bg-dark p-4 text-center"
+            style="border-radius: 20px; height: 580px;">
             <h5 class="card-title">Projeto Concessionária</h5>
-            <img id="imgprojetos" src="assets/img/concessionaria.jpeg" class="card-img-top mt-4 mb-3 rounded-1"
-              alt="Foto do projeto">
+            <img src="assets/img/concessionaria.jpeg" class="card-img-top mt-4 mb-3 rounded-1" alt="Foto do projeto">
             <p class="card-text">Este é um sistema de gerenciamento ERP para uma Concessionária de veículos, onde
               funcionários podem criar, editar e excluir veículos, além de definir prioridades e prazos. O objetivo é
               melhorar a organização e a produtividade, facilitando o acompanhamento de tarefas da empresa.</p>
@@ -103,75 +103,105 @@
             </div>
           </div>
         </div>
+
+        <!-- Modal 1 -->
+        <div id="modal-1" class="modal">
+          <div class="modal-content">
+            <h2 class="p-4">Projeto Concessionária</h2>
+            <img src="assets/img/concessionaria.jpeg" alt="Foto do projeto" class="modal-img">
+            <p class="fs-5">O sistema da concessionária tem como objetivo otimizar e agilizar a gestão de estoque,
+              vendas, clientes e funcionários. Ele será utilizado por diferentes perfis de colaboradores, incluindo
+              vendedores, almoxarifes, profissionais do setor financeiro, supervisores e gerentes, que terão a
+              responsabilidade de manter as informações sempre atualizadas.</p>
+            <p class="fs-5">Entre suas principais funcionalidades, o sistema permitirá o cadastro e a consulta de dados
+              de clientes, funcionários e veículos, além da geração de relatórios detalhados sobre o volume de vendas
+              semanais e mensais, bem como o saldo de veículos em estoque. Dessa forma, a ferramenta contribuirá para um
+              gerenciamento mais eficiente, organizado e ágil das operações da concessionária.</p>
+            <span class="close p-3">&times;</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
         <div class="col-lg-6 col-md-4 p-3 text-white">
-          <div class="card-body bg-dark p-4 text-center" style="border-radius: 20px; height: 580px;">
-            <h5 class="card-title">Projeto 2</h5>
-            <img id="imgprojetos" src="assets/img/concessionaria.jpeg" class="card-img-top mt-4 mb-3 rounded-1"
-              alt="Foto do projeto2">
-            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam
-              quidem quasi tempora officiis? Vero, quasi. Quibusdam nihil ducimus, atque molestiae
-              incidunt placeat ipsam, ipsa veritatis ab dicta maxime officia debitis.</p>
+          <div id="card-projeto-2" class="card-body bg-dark p-4 text-center"
+            style="border-radius: 20px; height: 580px;">
+            <h5 class="card-title">Catalago de camisas do Corinthians</h5>
+            <img src="assets/img/catalago.png" class="card-img-top mt-4 mb-3 rounded-1" alt="Foto do projeto2">
+            <p class="card-text">A tela de catálogo exibe uma coleção de camisetas disponíveis para compra. Ao clicar em
+              uma peça, o usuário é direcionado para uma página detalhada com a imagem ampliada da camisa, permitindo
+              uma melhor visualização do produto.</p>
             <div class="text-center">
               <a class="btn btn-light" target="_blank" href=""><i class="bi bi-github p-3"></i></a>
             </div>
           </div>
         </div>
+
+        <!-- Modal 2 -->
+        <div id="modal-2" class="modal">
+          <div class="modal-content">
+            <h2 class="p-4">Catalago de camisas do Corinthians</h2>
+            <img src="assets/img/catalago.png" alt="Foto do catalago" class="modal-img">
+            <p class="card-text fs-4">A tela de catálogo de camisetas é uma interface onde os usuários podem visualizar
+              diferentes modelos disponíveis para compra. Cada item é apresentado com uma imagem, nome e, opcionalmente,
+              preço. Ao clicar em uma camiseta, o sistema abre uma nova tela dedicada exclusivamente a esse produto.
+              Nela, a peça é exibida em destaque, permitindo uma visão mais detalhada do design, tecido e acabamentos.
+              Esse recurso facilita a experiência do usuário, tornando a navegação mais intuitiva e permitindo uma
+              melhor avaliação antes da compra.</p>
+            <img src="assets/img/camisa.png" alt="Foto da camisa" class="modal-img">
+            <span class="close p-3">&times;</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
-  <!-- Mensagens -->
-  <div class="row justify-content-center">
-    <div class="col-8 col-md-6 mt-4">
-      <div id="success-message" class="alert alert-success d-none">
-        Mensagem enviada com sucesso! 🎉
-      </div>
-    </div>
-  </div>
-
-  <!-- Mensagem de erro -->
-
-  <div class="row justify-content-center">
-    <div class="col-8 col-md-6 mt-4">
-        <div id="alert-message-erronumber" class="alert alert-danger d-none" role="alert">
-            <p>Por favor, insira um número de WhatsApp válido com 11 dígitos.</p>
-        </div>
-    </div>
-  </div>
-
-
   <!-- Formulário -->
   <section id="contato" class="py-5 p-4">
+
+    <!-- Mensagens -->
+    <div class="row justify-content-center">
+      <div class="col-8 col-md-6 mt-4">
+        <div id="success-message" class="alert alert-success d-none">
+          Mensagem enviada com sucesso! 🎉
+        </div>
+      </div>
+    </div>
+
+    <!-- Mensagem de erro -->
+
+    <div class="row justify-content-center">
+      <div class="col-8 col-md-6 mt-4">
+        <div id="alert-message-erronumber" class="alert alert-danger d-none" role="alert">
+          <p>Por favor, insira um número de WhatsApp válido com 11 dígitos.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
-      <div class="col-12 col-md-12 text-white ">
+      <div class="col-12 col-md-12  ">
         <form id="contato-form" class="container mt-4 mb-5">
           <h1>Entre em Contato</h1>
           <div class="mb-3">
-            <label class="form-label">Nome:</label>
+            <label class="form-label fs-4">Nome:</label>
             <input type="text" class="form-control" placeholder="Digite seu nome" required>
-            <div class="invalid-feedback">Por favor, insira seu nome.</div>
           </div>
 
           <div class="mb-3">
-            <label class="form-label">E-mail:</label>
+            <label class="form-label fs-4">E-mail:</label>
             <input type="email" class="form-control" placeholder="seuemail@exemplo.com" required>
-            <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Contato:</label>
+            <label class="form-label fs-4">Contato:</label>
             <input id="numero_contato" type="tel" class="form-control" placeholder="(47) 9 9999-9999">
-            <div class="invalid-feedback">Por favor, insira um número de telefone válido.</div>
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Mensagem:</label>
+            <label class="form-label fs-4">Mensagem:</label>
             <textarea class="form-control" rows="4" placeholder="Digite sua mensagem" required></textarea>
-            <div class="invalid-feedback">Por favor, escreva uma mensagem.</div>
           </div>
 
           <div class="text-center">
-            <button type="submit" class="btn btn-dark btn-lg">Enviar</button>
+            <button type="submit" class="btn btn-dark btn-lg mt-4 fs-3">Enviar</button>
           </div>
         </form>
       </div>
