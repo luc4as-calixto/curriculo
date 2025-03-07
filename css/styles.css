@@ -14,13 +14,13 @@
   text-align: center;
 }
 
-button{
+button {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-button:hover{
+button:hover {
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
-}	
+}
 
 body {
   overflow-x: hidden;
@@ -41,7 +41,7 @@ section {
   color: white;
 }
 
-#home:hover{
+#home:hover {
   color: rgba(255, 255, 255, 0.562);
 }
 
@@ -52,7 +52,7 @@ section {
 }
 
 #link:hover {
-  color: rgba(255, 255, 255, 0.562) ;
+  color: rgba(255, 255, 255, 0.562);
 }
 
 
@@ -142,7 +142,7 @@ section {
     width: 100%;
   }
 }
-  
+
 .animate-text {
   display: inline-block;
   overflow: hidden;
@@ -190,22 +190,94 @@ section {
   align-items: center;
 }
 
-#txtsobre{
+#txtsobre {
   width: 350px;
-  align-items: center;  
+  align-items: center;
   padding: 10px;
 }
 
-#txt{
+#txt {
   width: 350px;
-  align-items: center;  
+  align-items: center;
   padding: 10px;
   border: 3px solid #e9ecef;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#txt1{
+#imgminha {
+  width: 250px;
+  height: auto;
+}
+
+/* ------------------------------------ section habilidades ------------------------------------ */
+
+#habilidades {
+  background-color: #e9ecef;
+}
+
+/* animação  */
+
+.text-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.animated-text {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.animated-text:hover {
+  transform: translateX(20px);
+}
+
+@keyframes direita-esquerda {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes esquerda-direita {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Inicia invisível e sem animação */
+#txt1, #txt2 {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+/* Classe que ativa a animação */
+.animated {
+  animation-fill-mode: both;
+  opacity: 1 !important;
+} 
+
+.animated.esquerda {
+  animation: esquerda-direita 1s ease-in-out;
+}
+
+.animated.direita {
+  animation: direita-esquerda 1s ease-in-out;
+}
+
+#txt1 {
   width: 350px;
   height: auto;
   padding-right: 5%;
@@ -214,10 +286,10 @@ section {
   border: 3px solid #e9ecef;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}	
+}
 
 
-#txt2{
+#txt2 {
   width: 350px;
   height: auto;
   align-items: center;
@@ -228,35 +300,6 @@ section {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#imgminha{
-  width: 250px;
-  height: auto;
-}
-
-/* ------------------------------------ section habilidades ------------------------------------ */
-
-#habilidades{
-  background-color: #e9ecef;
-}
-
-/* animação  */
-
-.text-container {
-  overflow: hidden; 
-  width: 100%; 
-}
-
-.animated-text {
-  display: inline-block; 
-  transition: transform 0.3s ease; 
-  cursor: default;  
-}
-
-.animated-text:hover {
-  transform: translateX(20px);
-}
-
-
 /* ------------------------------------ section projeto ------------------------------------ */
 
 #projetos {
@@ -265,23 +308,23 @@ section {
   margin-top: 15px;
 }
 
-#imgprojetos{
+#imgprojetos {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-#card-projeto{
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);  
+#card-projeto {
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);
 }
 
-#card-projeto-1{
+#card-projeto-1 {
   cursor: pointer;
   font-size: 17px;
 }
 
-#card-projeto-2{
+#card-projeto-2 {
   cursor: pointer;
   font-size: 17px;
 }
@@ -290,7 +333,8 @@ section {
 
 /* Estilo do modal */
 .modal {
-  display: none; /* Esconde o modal por padrão */
+  display: none;
+  /* Esconde o modal por padrão */
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -298,13 +342,16 @@ section {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro com transparência */
-  backdrop-filter: blur(5px); /* Efeito de desfoque */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fundo escuro com transparência */
+  backdrop-filter: blur(5px);
+  /* Efeito de desfoque */
 }
 
 /* Conteúdo do modal */
 .modal-content {
-  background-color: #343a40; /* Cor de fundo do modal */
+  background-color: #343a40;
+  /* Cor de fundo do modal */
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
@@ -338,7 +385,8 @@ section {
 /* Adiciona padding para compensar a barra de scroll */
 body.modal-open {
   overflow: hidden;
-  padding-right: 15px; /* Ajuste conforme necessário */
+  padding-right: 15px;
+  /* Ajuste conforme necessário */
 }
 
 /* ------------------------------------ section contato ------------------------------------ */
@@ -352,9 +400,9 @@ body.modal-open {
 
 /* Estiliza os campos de input */
 .form-control {
-  background-color: #f8f9fa; 
-  border: 2px solid #ccc; 
-  border-radius: 8px; 
+  background-color: #f8f9fa;
+  border: 2px solid #ccc;
+  border-radius: 8px;
   padding: 12px;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
@@ -363,7 +411,7 @@ body.modal-open {
 
 /* Efeito ao focar no campo */
 .form-control:focus {
-  border-color: #007bff; 
+  border-color: #007bff;
   box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
   outline: none;
   background-color: white;

@@ -1,17 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-  // Remove a classe 'animate-text' ao elemento com a classe 'animate-text' após 5 segundos
+  // Remove a classe 'animate-text' ao elemento com a classe 'animate-text' após 3.9 segundos
   setTimeout(() => {
     document.querySelector('#nome').classList.remove('animate-text');
   }, 3900);
 
   // Detecta o rolar da página e aplica ou remove a classe 'scrolled' na navbar com id 'minha-navbar'
   window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('#minha-navbar'); // Seleciona a navbar com id 'minha-navbar'
-    if (window.scrollY > 0) { // Se o usuário rolou mais de 0px
-      navbar.classList.add('scrolled'); // Adiciona a classe scrolled
+    const navbar = document.querySelector('#minha-navbar');
+    if (window.scrollY > 0) {
+      navbar.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled'); // Remove a classe scrolled
+      navbar.classList.remove('scrolled');
     }
   });
 });
@@ -23,18 +22,17 @@ document.getElementById('contato-form').addEventListener('submit', function (eve
   document.getElementById('success-message').classList.add('d-none');
   document.getElementById('alert-message-erronumber').classList.add('d-none');
 
-  var whatsapp = document.getElementById('numero_contato').value;
+  let whatsapp = document.getElementById('numero_contato').value;
 
   // Remove caracteres não numéricos
   whatsapp = whatsapp.replace(/\D/g, '');
 
   // Verifica se o número tem exatamente 11 dígitos
-  var regex = /^[0-9]{11}$/;
+  const regex = /^[0-9]{11}$/;
 
   if (whatsapp === '' || !regex.test(whatsapp)) {
     document.getElementById('alert-message-erronumber').classList.remove('d-none');
   } else {
-
     // Oculta as mensagens de erro
     document.getElementById('alert-message-erronumber').classList.add('d-none');
 
@@ -52,14 +50,14 @@ document.getElementById('contato-form').addEventListener('submit', function (eve
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
   modal.style.display = "block";
-  document.body.classList.add("modal-open"); // Adiciona a classe ao body
+  document.body.classList.add("modal-open");
 }
 
 // Função para fechar o modal
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   modal.style.display = "none";
-  document.body.classList.remove("modal-open"); // Remove a classe do body
+  document.body.classList.remove("modal-open");
 }
 
 // Adiciona eventos aos cards
@@ -79,4 +77,22 @@ window.addEventListener("click", (event) => {
   if (event.target.classList.contains("modal")) {
     closeModal(event.target.id);
   }
+});
+
+// Executa a animação dos textos quando eles ficam visíveis na tela
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.id === "txt1") {
+          entry.target.classList.add("animated", "esquerda");
+        } else if (entry.target.id === "txt2") {
+          entry.target.classList.add("animated", "direita");
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.getElementById("txt1"));
+  observer.observe(document.getElementById("txt2"));
 });
