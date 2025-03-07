@@ -63,6 +63,8 @@ function closeModal(modalId) {
 // Adiciona eventos aos cards
 document.getElementById("card-projeto-1").addEventListener("click", () => openModal("modal-1"));
 document.getElementById("card-projeto-2").addEventListener("click", () => openModal("modal-2"));
+document.getElementById("card-projeto-3").addEventListener("click", () => openModal("modal-3"));
+document.getElementById("card-projeto-4").addEventListener("click", () => openModal("modal-4"));
 
 // Adiciona eventos aos botões de fechar
 document.querySelectorAll(".close").forEach((closeBtn) => {

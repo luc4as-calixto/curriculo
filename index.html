@@ -52,7 +52,7 @@
   <!-- Sobre Mim -->
   <section id="sobre">
     <div id="distancia" class="row">
-      <h1 class="text-center">Sobre mim</h1>  
+      <h1 class="text-center">Sobre mim</h1>
       <div id="txtsobre" class="col-lg-4">
         <img id="imgminha" class="rounded-circle p-4" src="assets/img/foto.jpg" alt="Foto do desenvolvedor" />
         <p class="masthead-subheading font-weight-light p-4 fs-4">Desenvolvedor Full-stack</p>
@@ -90,7 +90,7 @@
       <h1 class="text-center p-3">Projetos</h1>
       <div class="row p-4">
         <!-- Card 1 -->
-        <div class="col-lg-6 col-md-4 p-3 text-white">
+        <div class="col-lg-5 col-md-4 p-3 text-white">
           <div id="card-projeto-1" class="card-body bg-dark p-4 text-center"
             style="border-radius: 20px; height: 580px;">
             <h5 class="card-title">Projeto Concessionária</h5>
@@ -99,8 +99,7 @@
               funcionários podem criar, editar e excluir veículos, além de definir prioridades e prazos. O objetivo é
               melhorar a organização e a produtividade, facilitando o acompanhamento de tarefas da empresa.</p>
             <div class="text-center">
-              <a class="btn btn-light" target="_blank" href="https://github.com/luc4as-calixto/Concessionaria"><i
-                  class="bi bi-github p-3"></i></a>
+              <a class="btn btn-light" target="_blank" href="https://github.com/luc4as-calixto/Concessionaria"><i class="bi bi-github p-3"></i></a>
             </div>
           </div>
         </div>
@@ -123,7 +122,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="col-lg-6 col-md-4 p-3 text-white">
+        <div class="col-lg-5 col-md-4 p-3 text-white">
           <div id="card-projeto-2" class="card-body bg-dark p-4 text-center"
             style="border-radius: 20px; height: 580px;">
             <h5 class="card-title">Catalago de camisas do Corinthians</h5>
@@ -143,7 +142,7 @@
             <h2 class="p-4">Catalago de camisas do Corinthians</h2>
             <img src="assets/img/catalago.png" alt="Foto do catalago" class="modal-img">
             <p class="card-text fs-4">A tela de catálogo de camisetas é uma interface onde os usuários podem visualizar
-              diferentes modelos disponíveis para compra. Cada item é apresentado com uma imagem, nome e, opcionalmente,
+              diferentes modelos disponíveis para compra. Cada item é apresentado com uma imagem, nome e
               preço. Ao clicar em uma camiseta, o sistema abre uma nova tela dedicada exclusivamente a esse produto.
               Nela, a peça é exibida em destaque, permitindo uma visão mais detalhada do design, tecido e acabamentos.
               Esse recurso facilita a experiência do usuário, tornando a navegação mais intuitiva e permitindo uma
@@ -152,6 +151,79 @@
             <span class="close p-3">&times;</span>
           </div>
         </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-5 col-md-4 p-3 text-white">
+          <div id="card-projeto-3" class="card-body bg-dark p-4 text-center"
+            style="border-radius: 20px; height: 580px;">
+            <h5 class="card-title">Projeto Hora do dia</h5>
+            <img src="assets/img/projeto_hora_manha.png" class="card-img-top mt-4 mb-3 rounded-1" alt="Foto do projeto">
+            <p class="card-text">Este sistema verifica a hora atual do computador do usuário e, com base nela, altera
+              dinamicamente a imagem exibida e a cor de fundo da página, proporcionando uma experiência visual
+              personalizada conforme o horário.</p>
+            <div class="text-center">
+              <a class="btn btn-light" target="_blank" href=""><i class="bi bi-github p-3"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div id="modal-3" class="modal">
+          <div class="modal-content">
+            <h2 class="p-4">Projeto Hora do dia</h2>
+            <img src="assets/img/projeto_hora_manha.png" alt="Foto do projeto" class="modal-img mt-4">
+            <p class="fs-5">O sistema utiliza JavaScript para capturar a hora atual do computador do usuário através do
+              objeto Date. Com base nessa informação, ele determina se é manhã, tarde ou noite e realiza as seguintes
+              ações:</p>
+            <p class="fs-4">Troca a imagem:</p>
+            <ul class="list-unstyled text-center"></ul>
+            <li class="fs-5">Se for de manhã (0h às 12h), mostra uma imagem de manhã.</li>
+            <li class="fs-5">Se for de tarde (12h às 18h), coloca uma imagem de tarde.</li>
+            <li class="fs-5">Se for de noite (depois das 18h), exibe uma imagem de noite.</li>
+            </ul>
+            <img src="assets/img/projeto_hora_tarde.png" alt="Foto do projeto" class="modal-img mt-4">
+            <p class="fs-4">Muda a cor de fundo:</p>
+            <ul class="list-unstyled text-center"></ul>
+            <li class="fs-5">De manhã, o fundo fica clarinho.</li>
+            <li class="fs-5">De tarde, o fundo fica com um tom mais quente.</li>
+            <li class="fs-5">De noite, o fundo fica escuro.</li>
+            </ul>
+            <img src="assets/img/projeto_hora_noite.png" alt="Foto do projeto" class="modal-img mt-4">
+            <span class="close p-3">&times;</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-5 col-md-4 p-3 text-white">
+          <div id="card-projeto-4" class="card-body bg-dark p-4 text-center"
+            style="border-radius: 20px; height: 580px;">
+            <h5 class="card-title">Sistema de verificação de idade</h5>
+            <img src="assets/img/projeto_idade.png" class="card-img-top mt-4 mb-3 rounded-1" alt="Foto do projeto2">
+            <p class="card-text">O sistema coleta o ano de nascimento e o sexo do usuário, calcula a idade atual e exibe
+              uma imagem personalizada com base nesses dados. Por exemplo, pode mostrar uma imagem de um homem ou mulher
+              em uma faixa etária específica, proporcionando uma experiência visual interativa e divertida.</p>
+            <div class="text-center">
+              <!-- <a class="btn btn-light" target="_blank" href=""><i class="bi bi-github p-3"></i></a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 4 -->
+        <div id="modal-4" class="modal">
+          <div class="modal-content">
+            <h2 class="p-4">Sistema de verificação de idade</h2>
+            <img src="assets/img/projeto_idade.png" alt="Foto do catalago" class="modal-img">
+            <p class="card-text fs-4">Esse sistema é uma aplicação interativa que solicita ao usuário duas informações
+              principais: o ano de nascimento e o sexo. Com base no ano de nascimento, ele calcula a idade atual do
+              usuário, subtraindo o ano informado do ano atual. Em seguida, o sistema combina a idade calculada e o sexo
+              para exibir uma imagem personalizada.</p>
+            <p class="fs-4 mt-4">Essa funcionalidade torna a experiência do usuário mais envolvente, pois ele visualiza
+              uma representação que reflete sua faixa etária e gênero. O sistema pode ser usado em sites de
+              entretenimento, redes sociais ou até mesmo em aplicativos de fitness e saúde.</p>
+            <span class="close p-3">&times;</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
