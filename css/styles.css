@@ -195,7 +195,6 @@ section {
 #txtsobre {
   width: 350px;
   align-items: center;
-  padding: 10px;
 }
 
 #txt {
@@ -260,7 +259,7 @@ section {
 }
 
 /* Inicia invisível e sem animação */
-#txt1, #txt2 {
+#txt1, #txt2{
   opacity: 0;
   transform: translateX(0);
 }
@@ -310,13 +309,6 @@ section {
   margin-top: 15px;
 }
 
-#imgprojetos {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
 #card-projeto {
   box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);
 }
@@ -325,6 +317,9 @@ section {
   cursor: pointer;
   font-size: 17px;
   transition: transform 0.3s ease;
+  border-radius: 20px; 
+  min-height: 600px;
+  height: auto; 
 }
 
 #card-projeto-1:hover, #card-projeto-2:hover, #card-projeto-3:hover, #card-projeto-4:hover {
