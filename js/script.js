@@ -76,7 +76,7 @@ document.querySelectorAll(".close").forEach((closeBtn) => {
 
 // Fecha o modal se o usuário clicar fora dele
 window.addEventListener("click", (event) => {
-  if (event.target.classList.contains("modal")) {
+  if (event.target.classList.contains("modal")) { 
     closeModal(event.target.id);
   }
 });
