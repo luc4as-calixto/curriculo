@@ -66,36 +66,27 @@ h1{
 /* Estilo normal da navbar */
 #minha-navbar {
   transition: all 0.3s ease-in-out;
-  /* Transição suave para todas as mudanças */
-  padding: 5rem 1rem;
-  /* Padding padrão */
   background-color: #343a40;
-  /* Cor de fundo padrão */
 }
 
 /* Estilo da navbar quando ela for reduzida */
 #minha-navbar.scrolled {
   padding: 0.5rem 1rem;
-  /* Menor padding quando rolada */
   background-color: #212529;
-  /* Cor de fundo mais escura quando rolada */
 }
 
 #minha-navbar .navbar-brand,
 #minha-navbar .nav-link {
   transition: font-size 0.3s ease-in-out;
-  /* Transição suave para o tamanho da fonte */
 }
 
 /* Reduzir tamanho da fonte dos links e do logo quando rolada */
 #minha-navbar.scrolled .navbar-brand {
   font-size: 1.3rem;
-  /* Tamanho da fonte do logo um pouco menor */
 }
 
 #minha-navbar.scrolled .nav-link {
   font-size: 1.3rem;
-  /* Tamanho da fonte dos links reduzido */
 }
 
 /* ------------------------------------ section imagem-header ------------------------------------ */
@@ -111,12 +102,9 @@ h1{
 /* A imagem vai cobrir toda a tela */
 .background-image {
   width: 100%;
-  height: 100vh;
-  /* 100% da altura da tela */
+  height: 100vh;  
   object-fit: cover;
-  /* Garante que a imagem cubra o espaço sem distorcer */
   z-index: -1;
-  /* Garante que a imagem fique atrás do texto */
 }
 
 /* Estilos para o nome */
@@ -126,15 +114,12 @@ h1{
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 5vw;
-  /* Tamanho do texto baseado na largura da tela */
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1;
   margin: 0;
   width: 80%;
-  /* Ajuste a largura do texto conforme necessário */
   text-align: center;
-  /* Centraliza o texto */
 }
 
 /* ------------------------------------ escrita header ------------------------------------ */
@@ -180,7 +165,6 @@ h1{
 @media (max-width: 500px) {
   .masthead-heading {
     font-size: 6vw;
-    /* Reduz o tamanho da fonte em telas menores */
   }
 }
 
@@ -392,7 +376,6 @@ h1{
 body.modal-open {
   overflow: hidden;
   padding-right: 15px;
-  /* Ajuste conforme necessário */
 }
 
 /* ------------------------------------ section contato ------------------------------------ */
